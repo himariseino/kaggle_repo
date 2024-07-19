@@ -1,2 +1,3 @@
-# __python__
-template repository for python peroject
+# **python**
+
+template repository for python project

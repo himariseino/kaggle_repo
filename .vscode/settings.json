@@ -11,4 +11,5 @@
     "notebook.formatOnCellExecution": true,
     "notebook.formatOnSave.enabled": true,
     "ruff.lint.run": "onSave",
+    "markdown.marp.enableHtml": true
 }

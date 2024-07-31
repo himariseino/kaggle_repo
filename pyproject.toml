@@ -4,6 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["ibukikaburagi <63328418+1buk109@users.noreply.github.com>"]
 readme = "README.md"
+packages = [
+    { include = "modules", from = "." },
+    { include = "dataset", from = "." },
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"

@@ -13,6 +13,8 @@ style: |
   :root {
     --base-color: #003366;
     --light-base: #005999;
+    --figure-color: #F56B60;
+    --figure-highlight: #20B2AA;
     --pale-base: #4D7999;
     --dark-base: #001F3F;
     --complement: #663300;
@@ -31,7 +33,7 @@ style: |
     color: var(--base-color);
   }
   h2 {
-    color: var(--light-base);
+    color: var(--base-color);
   }
   a {
     color: var(--light-base);

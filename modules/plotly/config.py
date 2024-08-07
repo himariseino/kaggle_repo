@@ -2,6 +2,7 @@ import plotly.graph_objects as go
 import plotly.io as pio
 
 COLORS = {
+    "background": "#FCFCFC",
     "base": "#003366",
     "primary": "#F56B60",
     "secondary": "#20B2AA",

@@ -14,21 +14,21 @@ python = "^3.12"
 
 
 [tool.poetry.group.dev.dependencies]
+dash = "^2.17.1"
 kaleido = "0.2.1"
 mypy = "^1.10.1"
 nbformat = "^5.10.4"
 pytest = "^8.2.2"
 ruff = "^0.5.3"
 tqdm = "^4.66.4"
-dash = "^2.17.1"
-
-[tool.poetry.scripts]
-app = "app.app:main"
-test = "pytest:main"
 
 [tool.poetry.group.demo.dependencies]
 ipykernel = "^6.29.5"
 plotly = "^5.22.0"
+
+[tool.poetry.scripts]
+app = "app.app:main"
+test = "pytest:main"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

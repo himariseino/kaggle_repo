@@ -17,15 +17,11 @@ class PlotlyConfig:
         "light": "#F8F9FA",
         "dark": "#343A40",
     }
+    path_to_save_figure: Path = Path("../outputs/figures")
 
-    def __init__(self, path_to_save_figure: Path = Path("../outputs/figures")):
-        self.set_custom_plotly_template()
-        self.path_to_save_figure = path_to_save_figure
-
+    @classmethod
     def set_custom_plotly_template(
-        self,
-        paper_bgcolor: str = "#fcfcfc",
-        plot_bgcolor: str = "#fcfcfc",
+        cls,
     ) -> None:
         """
         Set custom template for Plotly.
@@ -42,15 +38,16 @@ class PlotlyConfig:
         """
         pio.templates["custom_template"] = go.layout.Template(
             layout=go.Layout(
-                paper_bgcolor=paper_bgcolor,
-                plot_bgcolor=plot_bgcolor,
+                paper_bgcolor=cls.COLORS["background"],
+                plot_bgcolor=cls.COLORS["background"],
             )
         )
         pio.templates.default = "custom_template"
 
+    @classmethod
     def save_png(
-        self, fig: go.Figure, filename: str, width: int = 1200, height: int = 500
+        cls, fig: go.Figure, filename: str, width: int = 1200, height: int = 500
     ):
         fig.write_image(
-            self.path_to_save_figure / f"{filename}.png", width=width, height=height
+            cls.path_to_save_figure / f"{filename}.png", width=width, height=height
         )
